@@ -1,0 +1,15 @@
+{
+  "short_name": "Whatsapp Stranger",
+  "name": "Whatsapp Stranger",
+  "icons": [
+    {
+      "src": "Whatsapp-logo.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#00ff73",
+  "background_color": "#00ff73"
+}
