@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  font-family: 'Dancing Script', cursive;
+  font-size: large;
+  font-weight: bold;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  grid-template-rows: repeat(1, 200px);
+  align-items: center;
+  justify-items: center;
+  gap: 25px 10px;
+}
+
+#whatsApp_homePage {
+  grid-column: span 2;
+}
+
+label[for="selectedCountry"] {
+  color: green;
+}
+
+#selectedCountry {
+  width: 200px;
+  padding: 10px;
+  border: 0;
+  outline: 0;
+  border-radius: 10px;
+  justify-self: start;
+  color: blue;
+  background-color: lightcyan;
+  box-shadow: 0 0 15px lightgreen;
+}
+
+#countryPrefix {
+  width: 60px;
+  justify-self: center;
+}
+
+input {
+  width: 200px;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 0 15px aquamarine;
+  color: blue;
+  justify-self: start;
+}
+
+input::placeholder {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  color: blue;
+}
+
+input:focus-visible {
+  outline: 3px solid aquamarine;
+}
+
+#chat {
+  width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  background-color: aqua;
+  box-shadow: 0 0 10px rgb(130, 128, 199);
+  border-radius: 15px;
+  color: blue;
+  grid-column: span 2;
+}
