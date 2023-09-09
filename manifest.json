@@ -18,7 +18,7 @@
       "name": "Whatsapp App",
       "short_name": "Whatsapp App",
       "description": "Opens the whatsapp application.",
-      "url": "intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end",
+      "url": "./whatsapp-app.html",
       "icons": [{"src": "Whatsapp-logo.png", "sizes": "144x144", "type": "image/png"}]
     }
   ],
