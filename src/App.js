@@ -74,6 +74,18 @@ function App() {
   );
 };
 
-const Functions = {App, Interactivity};
+function Shortcut() {
+  if (isAndroid) {
+    window.location.replace ("intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end");    
+  }
+  else if (isIOS) {
+      window.location.replace ("whatsapp://");
+  }
+  else {
+      window.location.replace ("https://web.whatsapp.com/");
+  }
+}
+
+const Functions = {App, Interactivity, Shortcut};
 
 export default Functions;
