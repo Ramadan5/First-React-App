@@ -4,22 +4,13 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>whatsapp application</title>
+        <script src="../src/App.js" type="module"></script>
     </head>
     <body>
         <script>
-            import { isAndroid, isIOS } from "react-device-detect";
+            import Functions from './App';
 
-            window.addEventListener ("load", () => {
-            if (isAndroid) {
-                window.location.replace ("intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end");    
-            }
-            else if (isIOS) {
-                window.location.replace ("whatsapp://");
-            }
-            else {
-                window.location.replace ("https://web.whatsapp.com/");
-            }
-            });
+            window.addEventListener ("load", Functions.Shortcut());
         </script>
     </body>
 </html>
