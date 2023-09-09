@@ -1,11 +1,12 @@
 import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-
-import data from "./countries.json";
 import { isAndroid, isIOS } from "react-device-detect";
+import './App.css';
+import data from "./countries.json";
+// import logo from './logo.svg';
 
-function Usage() {
+
+function Interactivity() {
+  const openApp = document.getElementById ("whatsApp_homePage");
   const selectedCountry = document.getElementById ("selectedCountry");
   const countryPrefix = document.getElementById ("countryPrefix");
   const input = document.getElementById ("number");
@@ -16,13 +17,13 @@ function Usage() {
 
 
   if (isAndroid) {
-    document.getElementById ("whatsApp_homePage").setAttribute ("href", "https://wa.me/+201");
+    openApp.setAttribute ("href", "intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end");
   }
   else if (isIOS) {
-    document.getElementById ("whatsApp_homePage").setAttribute ("href", "whatsapp://");
+    openApp.setAttribute ("href", "whatsapp://");
   }
   else {
-    document.getElementById ("whatsApp_homePage").setAttribute ("href", "https://web.whatsapp.com/");
+    openApp.setAttribute ("href", "https://web.whatsapp.com/");
   }
 
   for (let i = 0; i < data.length; i++) {
@@ -73,6 +74,6 @@ function App() {
   );
 };
 
-const Test = {App, Usage};
+const Functions = {App, Interactivity};
 
-export default Test;
+export default Functions;

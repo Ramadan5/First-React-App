@@ -6,6 +6,19 @@
       "src": "Whatsapp-logo.png",
       "sizes": "144x144",
       "type": "image/png"
+    },
+    {
+      "src": "Whatsapp-logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Whatsapp App",
+      "short_name": "Whatsapp App",
+      "url": "intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end",
+      "icons": [{"src": "WhatsApp.svg", "sizes": "144x144", "type": "image/svg"}]
     }
   ],
   "start_url": ".",
