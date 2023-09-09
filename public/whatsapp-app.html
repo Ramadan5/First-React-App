@@ -7,7 +7,17 @@
     </head>
     <body>
         <script>
-            window.location.replace ("intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end");
+            import { isAndroid, isIOS } from "react-device-detect";
+
+            if (isAndroid) {
+                window.location.replace ("intent://chat/#Intent;scheme=whatsapp;package=com.whatsapp;end");    
+            }
+            else if (isIOS) {
+                window.location.replace ("whatsapp://");
+            }
+            else {
+                window.location.replace ("https://web.whatsapp.com/");
+            }
         </script>
     </body>
 </html>
