@@ -1,9 +1,10 @@
 import React from 'react';
 import { isAndroid, isIOS } from "react-device-detect";
 import './App.css';
-import data from "./countries.json";
+// import data from "./countries.json";
 // import logo from './logo.svg';
 
+const data = require ('./countries.json');
 
 function Interactivity() {
   const openApp = document.getElementById ("whatsApp_homePage");
