@@ -1,8 +1,7 @@
 import React from 'react';
 import { isAndroid, isIOS } from "react-device-detect";
 import './App.css';
-// import data from "./countries.json";
-const data = JSON.parse ("./countries.json");
+import data from "./countries.json";
 // import logo from './logo.svg';
 
 
@@ -27,28 +26,28 @@ function Interactivity() {
     openApp.setAttribute ("href", "https://web.whatsapp.com/");
   }
 
-  
   for (let i = 0; i < data.length; i++) {
-      countries[i] = data[i].name;
-      let country = document.createElement ("option");
-      country.innerText = countries[i];
-      if (country.innerText == "Egypt") {
-          country.setAttribute ("selected", "");
-      }
-      selectedCountry.append (country);
+    countries[i] = data[i].name;
+    let country = document.createElement ("option");
+    country.innerText = countries[i];
+    if (country.innerText == "Egypt") {
+        country.setAttribute ("selected", "");
+    }
+    selectedCountry.append (country);
   }
   
   selectedCountry.addEventListener ("change", () => {
-      for (let i = 0; i < data.length; i++) {
-          countries[i] = data[i].name;
-          countryDialCodes[i] = data[i].dial_code;
-  
-          if (selectedCountry.options[selectedCountry.selectedIndex].text == countries[i]) {
-              countryPrefix.value = countryDialCodes[i];
-          }
-      }
-      chatBtn.setAttribute ("href", "https://wa.me/" + countryPrefix.value + input.value.replace (/ /g, ""));
+    for (let i = 0; i < data.length; i++) {
+        countries[i] = data[i].name;
+        countryDialCodes[i] = data[i].dial_code;
+
+        if (selectedCountry.options[selectedCountry.selectedIndex].text == countries[i]) {
+            countryPrefix.value = countryDialCodes[i];
+        }
+    }
+    chatBtn.setAttribute ("href", "https://wa.me/" + countryPrefix.value + input.value.replace (/ /g, ""));
   });
+  
 
   input.addEventListener ("input", (e) => {
     e.preventDefault();
