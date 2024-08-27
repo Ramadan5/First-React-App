@@ -53,6 +53,8 @@ function Interactivity() {
   input.addEventListener ("input", (e) => {
     e.preventDefault();
 
+    input.value = input.value.replace (/ /g, "");
+
     if (input.value[0] === 0) {
         input.value = input.value - input.value[0];
     }
